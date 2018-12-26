@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FeelsBook</string>
+
+    <!-- String for MainActivity -->
+    <string name="historyButton">Check History</string>
+    <string name="recordButton">Record Feels</string>
+    <string name="askFeeling">How do you feel today?</string>
+</resources>
