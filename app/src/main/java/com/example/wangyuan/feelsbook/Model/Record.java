@@ -4,14 +4,14 @@ import java.util.Date;
 
 public class Record {
     private String comment;
-    private Date data;
+    private String date;
     private String feel;
     private int emojiId;
 
 
-    public Record(String comment, Date data, String feel, int emojiId) {
+    public Record(String feel, int emojiId,String comment,String date) {
         this.comment = comment;
-        this.data = data;
+        this.date = date;
         this.feel = feel;
         this.emojiId = emojiId;
     }
