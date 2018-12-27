@@ -20,6 +20,10 @@ public class RecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
+        loadView();
+    }
+
+    public void loadView(){
         emotionData = new ArrayList<>();
         emotionData.add(new Emotion(R.drawable.joy,"Joy"));
         emotionData.add(new Emotion(R.drawable.anger,"Anger"));
@@ -36,11 +40,6 @@ public class RecordActivity extends AppCompatActivity {
 
         RecordAdapter adapter = new RecordAdapter(this,R.layout.emotion_list,emotionData);
         listView.setAdapter(adapter);
-
-    }
-
-    public String getEmojiByUnicode(int unicode){
-        return new String(Character.toChars(unicode));
     }
 
 }
