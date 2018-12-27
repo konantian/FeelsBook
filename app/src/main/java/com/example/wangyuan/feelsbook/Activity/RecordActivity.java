@@ -39,4 +39,8 @@ public class RecordActivity extends AppCompatActivity {
 
     }
 
+    public String getEmojiByUnicode(int unicode){
+        return new String(Character.toChars(unicode));
+    }
+
 }
