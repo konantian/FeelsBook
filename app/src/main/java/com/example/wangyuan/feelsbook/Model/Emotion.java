@@ -8,4 +8,21 @@ public class Emotion {
         this.resId = resId;
         this.feeling = feeling;
     }
+
+
+    public String getFeeling() {
+        return feeling;
+    }
+
+    public void setFeeling(String feeling) {
+        this.feeling = feeling;
+    }
+
+    public int getResId() {
+        return resId;
+    }
+
+    public void setResId(int resId) {
+        this.resId = resId;
+    }
 }

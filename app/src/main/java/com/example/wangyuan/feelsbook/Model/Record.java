@@ -39,4 +39,12 @@ public class Record {
     public void setEmojiId(int emojiId) {
         this.emojiId = emojiId;
     }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
