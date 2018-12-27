@@ -7,20 +7,9 @@
     <string name="askFeeling">How do you feel today?</string>
 
     <!-- String for RecordActivity -->
-    <string name="feeling_prompt">Choose your feeling</string>
-
-    <string-array name="feels_arrays">
-        <item>Joy</item>
-        <item>Surprise</item>
-        <item>Sadness</item>
-        <item>Lucky</item>
-        <item>Anger</item>
-        <item>Love</item>
-        <item>Cool</item>
-        <item>Fear</item>
-        <item>Sick</item>
-        <item>Speechless</item>
-    </string-array>
 
     <string name="current_feeling">How do you feel now?</string>
+
+    <!-- String for CommentActivity -->
+    <string name="save">Save</string>
 </resources>

@@ -31,6 +31,7 @@ public class RecordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_record);
 
         listView = findViewById(R.id.EmotionsList);
+
         feelsTable = getTable();
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
@@ -38,6 +39,7 @@ public class RecordActivity extends AppCompatActivity {
 
         loadView();
 
+        //emotions listview listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -50,6 +52,7 @@ public class RecordActivity extends AppCompatActivity {
         });
     }
 
+    //load all the emotions and it's titles
     public void loadView(){
         emotionData = new ArrayList<>();
         emotionData.add(new Emotion(R.drawable.joy,"Joy"));
@@ -63,11 +66,13 @@ public class RecordActivity extends AppCompatActivity {
         emotionData.add(new Emotion(R.drawable.surprise,"Surprise"));
         emotionData.add(new Emotion(R.drawable.sadness,"Sadness"));
 
+        //set adapter to listview
         RecordAdapter adapter = new RecordAdapter(this,R.layout.emotion_list,emotionData);
         listView.setAdapter(adapter);
 
     }
 
+    //initialize the hash table for all emotions
     public Hashtable<Integer, String> getTable(){
         Hashtable<Integer, String>  feels = new Hashtable<Integer, String>();
 

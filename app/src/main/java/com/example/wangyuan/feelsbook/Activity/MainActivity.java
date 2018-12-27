@@ -5,14 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.wangyuan.feelsbook.Model.Record;
 import com.example.wangyuan.feelsbook.R;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    public static List<Record> recordHistory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        recordHistory = new ArrayList<>();
 
     }
 

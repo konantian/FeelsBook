@@ -3,10 +3,10 @@ package com.example.wangyuan.feelsbook.Model;
 import java.util.Date;
 
 public class Record {
-    private String comment;
-    private String date;
-    private String feel;
-    private int emojiId;
+    public String comment;
+    public String date;
+    public String feel;
+    public int emojiId;
 
 
     public Record(String feel, int emojiId,String comment,String date) {
