@@ -7,9 +7,32 @@
     <string name="askFeeling">How do you feel today?</string>
 
     <!-- String for RecordActivity -->
-
     <string name="current_feeling">How do you feel now?</string>
+    <string name="joy">Joy</string>
+    <string name="cool">Cool</string>
+    <string name="love">Love</string>
+    <string name="anger">Anger</string>
+    <string name="fear">Fear</string>
+    <string name="lucky">Lucky</string>
+    <string name="sick">Sick</string>
+    <string name="surprise">Surprise</string>
+    <string name="speechless">Speechless</string>
+    <string name="sadness">Sadness</string>
+
+    <string name="Joy">joy</string>
+    <string name="Cool">cool</string>
+    <string name="Love">love</string>
+    <string name="Anger">anger</string>
+    <string name="Fear">fear</string>
+    <string name="Lucky">lucky</string>
+    <string name="Sick">sick</string>
+    <string name="Surprise">surprise</string>
+    <string name="Speechless">speechless</string>
+    <string name="Sadness">sadness</string>
+
 
     <!-- String for CommentActivity -->
     <string name="save">Save</string>
+    <string name="modify">Modify</string>
+
 </resources>

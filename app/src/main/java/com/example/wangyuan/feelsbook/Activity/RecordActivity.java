@@ -45,8 +45,10 @@ public class RecordActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 String feeling = feelsTable.get(position);
                 Intent comment = new Intent(RecordActivity.this, CommentActivity.class);
+                comment.putExtra("activity","Record");
                 comment.putExtra("feeling", feeling);
                 comment.putExtra("date",current_time);
+                comment.putExtra("comment","");
                 startActivity(comment);
             }
         });
@@ -55,16 +57,16 @@ public class RecordActivity extends AppCompatActivity {
     //load all the emotions and it's titles
     public void loadView(){
         emotionData = new ArrayList<>();
-        emotionData.add(new Emotion(R.drawable.joy,"Joy"));
-        emotionData.add(new Emotion(R.drawable.anger,"Anger"));
-        emotionData.add(new Emotion(R.drawable.cool,"Cool"));
-        emotionData.add(new Emotion(R.drawable.fear,"Fear"));
-        emotionData.add(new Emotion(R.drawable.love,"Love"));
-        emotionData.add(new Emotion(R.drawable.lucky,"Lucky"));
-        emotionData.add(new Emotion(R.drawable.sick,"Sick"));
-        emotionData.add(new Emotion(R.drawable.speechless,"Speechless"));
-        emotionData.add(new Emotion(R.drawable.surprise,"Surprise"));
-        emotionData.add(new Emotion(R.drawable.sadness,"Sadness"));
+        emotionData.add(new Emotion(R.drawable.joy,getString(R.string.joy)));
+        emotionData.add(new Emotion(R.drawable.anger,getString(R.string.anger)));
+        emotionData.add(new Emotion(R.drawable.cool,getString(R.string.cool)));
+        emotionData.add(new Emotion(R.drawable.fear,getString(R.string.fear)));
+        emotionData.add(new Emotion(R.drawable.love,getString(R.string.love)));
+        emotionData.add(new Emotion(R.drawable.lucky,getString(R.string.lucky)));
+        emotionData.add(new Emotion(R.drawable.sick,getString(R.string.sick)));
+        emotionData.add(new Emotion(R.drawable.speechless,getString(R.string.speechless)));
+        emotionData.add(new Emotion(R.drawable.surprise,getString(R.string.surprise)));
+        emotionData.add(new Emotion(R.drawable.sadness,getString(R.string.sadness)));
 
         //set adapter to listview
         RecordAdapter adapter = new RecordAdapter(this,R.layout.emotion_list,emotionData);
@@ -76,16 +78,16 @@ public class RecordActivity extends AppCompatActivity {
     public Hashtable<Integer, String> getTable(){
         Hashtable<Integer, String>  feels = new Hashtable<>();
 
-        feels.put(0,"joy");
-        feels.put(1,"anger");
-        feels.put(2,"cool");
-        feels.put(3,"fear");
-        feels.put(4,"love");
-        feels.put(5,"lucky");
-        feels.put(6,"sick");
-        feels.put(7,"speechless");
-        feels.put(8,"surprise");
-        feels.put(9,"sadness");
+        feels.put(0,getString(R.string.Joy));
+        feels.put(1,getString(R.string.Anger));
+        feels.put(2,getString(R.string.Cool));
+        feels.put(3,getString(R.string.Fear));
+        feels.put(4,getString(R.string.Love));
+        feels.put(5,getString(R.string.Lucky));
+        feels.put(6,getString(R.string.Sick));
+        feels.put(7,getString(R.string.Speechless));
+        feels.put(8,getString(R.string.Surprise));
+        feels.put(9,getString(R.string.Sadness));
 
         return feels;
     }
