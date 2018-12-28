@@ -55,6 +55,7 @@ public class CommentActivity extends AppCompatActivity {
 
     }
 
+    //save new record to local file
     public void Save(View v){
         //receive string from previous activity
         String current_time = getIntent().getStringExtra("date");
@@ -65,7 +66,7 @@ public class CommentActivity extends AppCompatActivity {
         //Generate a new record
         Record record = new Record(feel,resID,commentsText,current_time);
         MainActivity.recordHistory.add(record);
-        saveData();
+        saveData("record");
         finish();
     }
 
@@ -117,21 +118,23 @@ public class CommentActivity extends AppCompatActivity {
 
     }
 
+    //save modified record to local file
     public void Modify(View v){
 
         String newComments  = comments.getText().toString();
         record.setComment(newComments);
-        saveData();
+        saveData("record");
 
         finish();
     }
 
-    public void saveData(){
+    //save record list to local file
+    public void saveData(String key){
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         Gson gson = new Gson();
         String json = gson.toJson(MainActivity.recordHistory);
-        editor.putString("task list",json);
+        editor.putString(key,json);
         editor.apply();
     }
 

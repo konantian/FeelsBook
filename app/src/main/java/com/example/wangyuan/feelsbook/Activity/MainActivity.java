@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadData();
+        loadData("record");
     }
 
     //Jump to history activity
@@ -38,10 +38,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(toRecord);
     }
 
-    public void loadData(){
+    //load saved record from local file
+    public void loadData(String key){
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",MODE_PRIVATE);
         Gson gson = new Gson();
-        String json = sharedPreferences.getString("task list",null);
+        String json = sharedPreferences.getString(key,null);
         Type type = new TypeToken<ArrayList<Record>>() {}.getType();
         recordHistory = gson.fromJson(json,type);
 
