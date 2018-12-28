@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/emojiHistory"
         android:layout_width="86dp"
-        android:layout_height="67dp"
+        android:layout_height="74dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -30,7 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="77dp" />
+        app:layout_constraintGuide_begin="88dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline3"
@@ -40,12 +40,28 @@
         app:layout_constraintGuide_begin="90dp" />
 
     <TextView
-        android:id="@+id/contentHistory"
+        android:id="@+id/contentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="TextView"
+        android:textSize="17sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/contentHistory"
+        android:layout_width="347dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -54,8 +70,8 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toEndOf="@+id/emojiHistory"
+        app:layout_constraintTop_toBottomOf="@+id/contentTitle"
+        app:layout_constraintVertical_bias="0.444" />
 
 </android.support.constraint.ConstraintLayout>

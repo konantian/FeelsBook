@@ -45,4 +45,7 @@ public class Record {
     public void setDate(String date) {
         this.date = date;
     }
+
+    public String getTitle(){ return "Time: "+date+" "+"You felt: "+feel;}
+
 }

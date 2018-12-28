@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.wangyuan.feelsbook.Model.Record;
 import com.example.wangyuan.feelsbook.R;
 
+
 import java.util.List;
 
 public class HistoryAdapter extends ArrayAdapter<Record> {
@@ -30,16 +31,17 @@ public class HistoryAdapter extends ArrayAdapter<Record> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
-        TextView emojiName = view.findViewById(R.id.contentHistory);
+        TextView contentTitle = view.findViewById(R.id.contentTitle);
+        TextView contentHistory = view.findViewById(R.id.contentHistory);
         ImageView emojiPic = view.findViewById(R.id.emojiHistory);
 
         Record record  = records.get(position);
-        String date = record.getDate();
-        String comments  = record.getComment();
-        String feel = record.getFeel();
 
-        String display = "Time: "+date+"  "+"You felt: "+feel+"\n"+comments;
-        emojiName.setText(display);
+        String title = record.getTitle();
+        String content = record.getComment();
+
+        contentHistory.setText(content);
+        contentTitle.setText(title);
         emojiPic.setImageResource(record.resId);
 
         return view;
