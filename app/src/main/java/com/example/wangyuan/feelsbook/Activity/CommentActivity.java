@@ -73,8 +73,11 @@ public class CommentActivity extends AppCompatActivity {
     public void initFromRecord(){
 
         //set another button to be invisible
-        Button button = findViewById(R.id.modifyButton);
-        button.setVisibility(View.INVISIBLE); //To set visible
+        Button modify = findViewById(R.id.modifyButton);
+        modify.setVisibility(View.INVISIBLE); //To set visible
+
+        Button delete = findViewById(R.id.deleteButton);
+        delete.setVisibility(View.INVISIBLE); //To set visible
 
         //set the comment edittext
         comments.setText(getIntent().getStringExtra("comment"));
@@ -136,6 +139,15 @@ public class CommentActivity extends AppCompatActivity {
         String json = gson.toJson(MainActivity.recordHistory);
         editor.putString(key,json);
         editor.apply();
+    }
+
+    //delete a record
+    public void Delete(View v){
+
+        Object deleteRecord = MainActivity.recordHistory.remove(position);
+        saveData("record");
+        finish();
+
     }
 
 }

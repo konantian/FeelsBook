@@ -34,5 +34,7 @@
     <!-- String for CommentActivity -->
     <string name="save">Save</string>
     <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+
 
 </resources>
