@@ -13,6 +13,7 @@ import com.example.wangyuan.feelsbook.R;
 public class HistoryActivity extends AppCompatActivity {
 
     ListView listView;
+    public HistoryAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,7 @@ public class HistoryActivity extends AppCompatActivity {
         listView = findViewById(R.id.recordHistory);
 
         //set adapter to listview
-        HistoryAdapter adapter = new HistoryAdapter(this,R.layout.history_list,MainActivity.recordHistory);
+        adapter = new HistoryAdapter(this,R.layout.history_list,MainActivity.recordHistory);
         listView.setAdapter(adapter);
 
         //listview listener
@@ -39,12 +40,12 @@ public class HistoryActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     @Override
-    protected  void onResume(){
+    protected void onResume(){
         super.onResume();
-
+        adapter.notifyDataSetChanged();
     }
+
 }

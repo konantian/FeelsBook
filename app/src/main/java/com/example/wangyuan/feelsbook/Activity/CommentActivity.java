@@ -118,6 +118,7 @@ public class CommentActivity extends AppCompatActivity {
 
         String newComments  = comments.getText().toString();
         record.setComment(newComments);
+
         finish();
     }
 }
