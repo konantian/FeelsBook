@@ -51,7 +51,8 @@ public class CommentActivity extends AppCompatActivity {
 
 
         //Generate a new record
-        Record record = new Record(mDrawableName,resID,commentsText,current_time);
+        String feel = mDrawableName.substring(0, 1).toUpperCase() + mDrawableName.substring(1);
+        Record record = new Record(feel,resID,commentsText,current_time);
         MainActivity.recordHistory.add(record);
         finish();
     }
