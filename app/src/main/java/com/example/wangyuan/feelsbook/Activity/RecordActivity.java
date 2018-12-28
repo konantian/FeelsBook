@@ -74,7 +74,7 @@ public class RecordActivity extends AppCompatActivity {
 
     //initialize the hash table for all emotions
     public Hashtable<Integer, String> getTable(){
-        Hashtable<Integer, String>  feels = new Hashtable<Integer, String>();
+        Hashtable<Integer, String>  feels = new Hashtable<>();
 
         feels.put(0,"joy");
         feels.put(1,"anger");

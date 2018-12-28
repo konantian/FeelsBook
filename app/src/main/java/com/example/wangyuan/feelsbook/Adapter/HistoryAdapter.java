@@ -38,7 +38,8 @@ public class HistoryAdapter extends ArrayAdapter<Record> {
         String comments  = record.getComment();
         String feel = record.getFeel();
 
-        emojiName.setText(date+"  "+feel+"\n"+comments);
+        String display = "Time: "+date+"  "+"You felt: "+feel+"\n"+comments;
+        emojiName.setText(display);
         emojiPic.setImageResource(record.emojiId);
 
         return view;
