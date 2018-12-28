@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorRecord"
     tools:context=".Activity.HistoryActivity">
 
 
@@ -11,6 +12,7 @@
         android:id="@+id/recordHistory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorRecord"
         android:layout_weight="1" />
 
 </LinearLayout>
