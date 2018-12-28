@@ -1,19 +1,17 @@
 package com.example.wangyuan.feelsbook.Model;
 
-import java.util.Date;
-
 public class Record {
     public String comment;
     public String date;
     public String feel;
-    public int emojiId;
+    public int resId;
 
 
-    public Record(String feel, int emojiId,String comment,String date) {
+    public Record(String feel, int resId,String comment,String date) {
         this.comment = comment;
         this.date = date;
         this.feel = feel;
-        this.emojiId = emojiId;
+        this.resId = resId;
     }
 
     public String getComment() {
@@ -32,12 +30,12 @@ public class Record {
         this.feel = feel;
     }
 
-    public int getEmojiId() {
-        return emojiId;
+    public int getResIdId() {
+        return resId;
     }
 
-    public void setEmojiId(int emojiId) {
-        this.emojiId = emojiId;
+    public void setResIdId(int resId) {
+        this.resId = resId;
     }
 
     public String getDate() {

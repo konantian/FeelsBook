@@ -17,7 +17,7 @@ public class CommentActivity extends AppCompatActivity {
     Drawable drawable;
     Resources res;
     ImageView image;
-    int resID;;
+    int resID;
     String mDrawableName;
 
     @Override
@@ -26,7 +26,7 @@ public class CommentActivity extends AppCompatActivity {
         setContentView(R.layout.activity_comment);
 
         //set imageview by string
-        image= findViewById(R.id.displayEmoji);
+        image = findViewById(R.id.displayEmoji);
 
         res = getResources();
         mDrawableName = getIntent().getStringExtra("feeling");;
@@ -36,7 +36,8 @@ public class CommentActivity extends AppCompatActivity {
 
         //set the textview
         TextView prompt = findViewById(R.id.feelPrompt);
-        prompt.setText("It seems like you are feeling \""+mDrawableName+"\" today, do you wanna leave some comments?");
+        String prompt_text = "It seems like you are feeling \""+mDrawableName+"\" today, do you wanna leave some comments?";
+        prompt.setText(prompt_text);
 
     }
 

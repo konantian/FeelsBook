@@ -9,20 +9,11 @@ public class Emotion {
         this.feeling = feeling;
     }
 
+    public String getFeeling() { return feeling; }
 
-    public String getFeeling() {
-        return feeling;
-    }
+    public void setFeeling(String feeling) { this.feeling = feeling; }
 
-    public void setFeeling(String feeling) {
-        this.feeling = feeling;
-    }
+    public int getResId() { return resId; }
 
-    public int getResId() {
-        return resId;
-    }
-
-    public void setResId(int resId) {
-        this.resId = resId;
-    }
+    public void setResId(int resId) { this.resId = resId; }
 }

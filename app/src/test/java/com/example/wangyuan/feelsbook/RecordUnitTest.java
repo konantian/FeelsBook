@@ -13,7 +13,7 @@ public class RecordUnitTest {
     public void recordEqualTest(){
 
         assertEquals("Joy",record.getFeel());
-        assertEquals(3, record.getEmojiId());
+        assertEquals(3, record.getResIdId());
         assertEquals("I feel happy today", record.getComment());
         assertEquals("2018-12-27", record.getDate());
 
@@ -23,7 +23,7 @@ public class RecordUnitTest {
     public void recordUnEqualTest(){
 
         assertNotEquals("joy",record.getFeel());
-        assertNotEquals(2, record.getEmojiId());
+        assertNotEquals(2, record.getResIdId());
         assertNotEquals("I feel sadness today", record.getComment());
         assertNotEquals("2018-12-28", record.getDate());
 

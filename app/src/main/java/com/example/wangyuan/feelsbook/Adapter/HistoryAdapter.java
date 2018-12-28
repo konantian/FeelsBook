@@ -40,7 +40,7 @@ public class HistoryAdapter extends ArrayAdapter<Record> {
 
         String display = "Time: "+date+"  "+"You felt: "+feel+"\n"+comments;
         emojiName.setText(display);
-        emojiPic.setImageResource(record.emojiId);
+        emojiPic.setImageResource(record.resId);
 
         return view;
     }
