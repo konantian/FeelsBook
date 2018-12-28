@@ -1,10 +1,11 @@
 package com.example.wangyuan.feelsbook.Activity;
 
+
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.wangyuan.feelsbook.Model.Record;
 import com.example.wangyuan.feelsbook.R;
+import com.google.gson.Gson;
 
 public class CommentActivity extends AppCompatActivity {
 
@@ -63,6 +65,7 @@ public class CommentActivity extends AppCompatActivity {
         //Generate a new record
         Record record = new Record(feel,resID,commentsText,current_time);
         MainActivity.recordHistory.add(record);
+        saveData();
         finish();
     }
 
@@ -118,7 +121,18 @@ public class CommentActivity extends AppCompatActivity {
 
         String newComments  = comments.getText().toString();
         record.setComment(newComments);
+        saveData();
 
         finish();
     }
+
+    public void saveData(){
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences",MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(MainActivity.recordHistory);
+        editor.putString("task list",json);
+        editor.apply();
+    }
+
 }
