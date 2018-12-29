@@ -54,7 +54,7 @@ public class Record {
     public String getTitle(){
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm", Locale.CANADA);
-        String current_time = dateFormat.format(date);
+        String current_time = dateFormat.format(this.date);
 
         return "Time: "+current_time+" "+"You felt: "+feel;}
 

@@ -33,9 +33,6 @@ public class RecordActivity extends AppCompatActivity {
         listView = findViewById(R.id.EmotionsList);
 
         feelsTable = getTable();
-        Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.CANADA);
-        final String current_time = dateFormat.format(date);
 
         loadView();
 
@@ -47,7 +44,6 @@ public class RecordActivity extends AppCompatActivity {
                 Intent comment = new Intent(RecordActivity.this, CommentActivity.class);
                 comment.putExtra("activity","Record");
                 comment.putExtra("feeling", feeling);
-                comment.putExtra("date",current_time);
                 comment.putExtra("comment","");
                 startActivity(comment);
             }

@@ -34,6 +34,7 @@ public class CommentActivity extends AppCompatActivity {
     String commentsText;
     EditText comments;
     Record record;
+    Date date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +64,9 @@ public class CommentActivity extends AppCompatActivity {
     public void Save(View v){
 
         //get current time
-        Date date = new Date();
+        date = new Date();
 
         //set the comments
-
         commentsText = comments.getText().toString();
 
         //Generate a new record
