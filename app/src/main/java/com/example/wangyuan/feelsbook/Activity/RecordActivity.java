@@ -34,8 +34,8 @@ public class RecordActivity extends AppCompatActivity {
 
         feelsTable = getTable();
         Date date = new Date();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
-        final String current_time=dateFormat.format(date);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.CANADA);
+        final String current_time = dateFormat.format(date);
 
         loadView();
 

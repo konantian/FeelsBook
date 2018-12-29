@@ -14,6 +14,11 @@ import com.example.wangyuan.feelsbook.Model.Record;
 import com.example.wangyuan.feelsbook.R;
 import com.google.gson.Gson;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class CommentActivity extends AppCompatActivity {
 
     Drawable drawable;
@@ -23,6 +28,7 @@ public class CommentActivity extends AppCompatActivity {
     int resID;
     int position;
     String mDrawableName;
+    String current_time;
     String feel;
     String prompt_text;
     String commentsText;
@@ -55,14 +61,16 @@ public class CommentActivity extends AppCompatActivity {
 
     //save new record to local file
     public void Save(View v){
-        //receive string from previous activity
-        String current_time = getIntent().getStringExtra("date");
+
+        //get current time
+        Date date = new Date();
+
         //set the comments
 
         commentsText = comments.getText().toString();
 
         //Generate a new record
-        Record record = new Record(feel,resID,commentsText,current_time);
+        Record record = new Record(feel,resID,commentsText,date);
         MainActivity.recordHistory.add(record);
         saveData("record");
         finish();

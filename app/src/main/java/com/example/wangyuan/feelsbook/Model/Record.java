@@ -1,13 +1,18 @@
 package com.example.wangyuan.feelsbook.Model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class Record {
     public String comment;
-    public String date;
+    public Date date;
     public String feel;
     public int resId;
 
 
-    public Record(String feel, int resId,String comment,String date) {
+    public Record(String feel, int resId,String comment,Date date) {
         this.comment = comment;
         this.date = date;
         this.feel = feel;
@@ -38,14 +43,19 @@ public class Record {
         this.resId = resId;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getTitle(){ return "Time: "+date+" "+"You felt: "+feel;}
+    public String getTitle(){
+
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm", Locale.CANADA);
+        String current_time = dateFormat.format(date);
+
+        return "Time: "+current_time+" "+"You felt: "+feel;}
 
 }
