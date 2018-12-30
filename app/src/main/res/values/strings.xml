@@ -7,17 +7,16 @@
     <string name="askFeeling">How do you feel today?</string>
 
     <!-- String for RecordActivity -->
-    <string name="current_feeling">How do you feel now?</string>
-    <string name="joy">Joy</string>
-    <string name="cool">Cool</string>
-    <string name="love">Love</string>
-    <string name="anger">Anger</string>
-    <string name="fear">Fear</string>
-    <string name="lucky">Lucky</string>
-    <string name="sick">Sick</string>
-    <string name="surprise">Surprise</string>
-    <string name="speechless">Speechless</string>
-    <string name="sadness">Sadness</string>
+    <string name="joy_now">I\'m feeling "Joy" now</string>
+    <string name="cool_now">I\'m feeling "Cool" now</string>
+    <string name="love_now">I\'m feeling "Love" now</string>
+    <string name="anger_now">I\'m feeling "Anger" now</string>
+    <string name="fear_now">I\'m feeling "Fear" now</string>
+    <string name="lucky_now">I\'m feeling "Lucky" now</string>
+    <string name="sick_now">I\'m feeling "Sick" now</string>
+    <string name="surprise_now">I\'m feeling "Surprise" now</string>
+    <string name="speechless_now">I\'m feeling "Speechless" now</string>
+    <string name="sadness_now">I\'m feeling "Sadness" now</string>
 
     <string name="Joy">joy</string>
     <string name="Cool">cool</string>
@@ -32,9 +31,40 @@
 
 
     <!-- String for CommentActivity -->
+    <string-array name="hint_titles">
+        <item>joy</item>
+        <item>cool</item>
+        <item>love</item>
+        <item>anger</item>
+        <item>fear</item>
+        <item>lucky</item>
+        <item>sick</item>
+        <item>surprise</item>
+        <item>speechless</item>
+        <item>sadness</item>
+    </string-array>
+
+    <string-array name="hint_values">
+        <item>Do you want to share your joy?</item>
+        <item>What made you so cool?</item>
+        <item>Who you fall in love with?</item>
+        <item>Why are you angry?</item>
+        <item>What are you worry about?</item>
+        <item>Wow, you are lucky!</item>
+        <item>May you get well soon!</item>
+        <item>What surprised you?</item>
+        <item>What made you speechless?</item>
+        <item>What made you so sad?</item>
+    </string-array>
+
     <string name="save">Save</string>
     <string name="modify">Modify</string>
     <string name="delete">Delete</string>
+
+    <!-- String for all Toasts -->
+    <string name="save_toast">You have saved your new record successfully!</string>
+    <string name="modify_toast">You have modified your record successfully!</string>
+    <string name="delete_toast">You have deleted you record successfully!</string>
 
 
 </resources>

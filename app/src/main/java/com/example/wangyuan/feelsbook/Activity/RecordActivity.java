@@ -6,18 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.example.wangyuan.feelsbook.Adapter.RecordAdapter;
 import com.example.wangyuan.feelsbook.Model.Emotion;
 import com.example.wangyuan.feelsbook.R;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Hashtable;
 import java.util.List;
-import java.util.Locale;
 
 public class RecordActivity extends AppCompatActivity {
 
@@ -53,16 +47,16 @@ public class RecordActivity extends AppCompatActivity {
     //load all the emotions and it's titles
     public void loadView(){
         emotionData = new ArrayList<>();
-        emotionData.add(new Emotion(R.drawable.joy,getString(R.string.joy)));
-        emotionData.add(new Emotion(R.drawable.anger,getString(R.string.anger)));
-        emotionData.add(new Emotion(R.drawable.cool,getString(R.string.cool)));
-        emotionData.add(new Emotion(R.drawable.fear,getString(R.string.fear)));
-        emotionData.add(new Emotion(R.drawable.love,getString(R.string.love)));
-        emotionData.add(new Emotion(R.drawable.lucky,getString(R.string.lucky)));
-        emotionData.add(new Emotion(R.drawable.sick,getString(R.string.sick)));
-        emotionData.add(new Emotion(R.drawable.speechless,getString(R.string.speechless)));
-        emotionData.add(new Emotion(R.drawable.surprise,getString(R.string.surprise)));
-        emotionData.add(new Emotion(R.drawable.sadness,getString(R.string.sadness)));
+        emotionData.add(new Emotion(R.drawable.joy,getString(R.string.joy_now)));
+        emotionData.add(new Emotion(R.drawable.anger,getString(R.string.anger_now)));
+        emotionData.add(new Emotion(R.drawable.cool,getString(R.string.cool_now)));
+        emotionData.add(new Emotion(R.drawable.fear,getString(R.string.fear_now)));
+        emotionData.add(new Emotion(R.drawable.love,getString(R.string.love_now)));
+        emotionData.add(new Emotion(R.drawable.lucky,getString(R.string.lucky_now)));
+        emotionData.add(new Emotion(R.drawable.sick,getString(R.string.sick_now)));
+        emotionData.add(new Emotion(R.drawable.speechless,getString(R.string.speechless_now)));
+        emotionData.add(new Emotion(R.drawable.surprise,getString(R.string.surprise_now)));
+        emotionData.add(new Emotion(R.drawable.sadness,getString(R.string.sadness_now)));
 
         //set adapter to listview
         RecordAdapter adapter = new RecordAdapter(this,R.layout.emotion_list,emotionData);

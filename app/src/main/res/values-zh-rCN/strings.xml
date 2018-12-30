@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FeelsBook</string>
+
+    <!-- String for MainActivity -->
+    <string name="historyButton">Check History</string>
+    <string name="recordButton">Record Feels</string>
+    <string name="askFeeling">How do you feel today?</string>
+
+    <!-- String for RecordActivity -->
+
+    <string name="Joy">joy</string>
+    <string name="Cool">cool</string>
+    <string name="Love">love</string>
+    <string name="Anger">anger</string>
+    <string name="Fear">fear</string>
+    <string name="Lucky">lucky</string>
+    <string name="Sick">sick</string>
+    <string name="Surprise">surprise</string>
+    <string name="Speechless">speechless</string>
+    <string name="Sadness">sadness</string>
+
+
+    <!-- String for CommentActivity -->
+    <string name="current_feeling">How do you feel now?</string>
+    <string name="joy">Do you want to share your joy?</string>
+    <string name="cool">What made you so cool?</string>
+    <string name="love">Who you fall in love with?</string>
+    <string name="anger">Why are you angry?</string>
+    <string name="fear">What are you worry about?</string>
+    <string name="lucky">Wow, you are lucky!</string>
+    <string name="sick">May you get well soon!</string>
+    <string name="surprise">What happened, dude?</string>
+    <string name="speechless">Who made you speechless?</string>
+    <string name="sadness">What made you so sad?</string>
+
+    <string name="save">Save</string>
+    <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+</resources>

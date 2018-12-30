@@ -10,14 +10,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.wangyuan.feelsbook.Model.Record;
 import com.example.wangyuan.feelsbook.R;
 import com.google.gson.Gson;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
+import java.util.HashMap;
 
 public class CommentActivity extends AppCompatActivity {
 
@@ -28,13 +27,13 @@ public class CommentActivity extends AppCompatActivity {
     int resID;
     int position;
     String mDrawableName;
-    String current_time;
     String feel;
     String prompt_text;
     String commentsText;
     EditText comments;
     Record record;
     Date date;
+    HashMap<String, String> titles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +44,15 @@ public class CommentActivity extends AppCompatActivity {
         image = findViewById(R.id.displayEmoji);
         comments = findViewById(R.id.optionalComment);
         prompt = findViewById(R.id.feelPrompt);
+
+        String[] titleKeys = getResources().getStringArray(R.array.hint_titles);
+        String[] titleValues = getResources().getStringArray(R.array.hint_values);
+
+        titles = new HashMap<>();
+
+        for(int i = 0; i < titleKeys.length; i++) {
+            titles.put(titleKeys[i], titleValues[i]);
+        }
 
         String activity = getIntent().getStringExtra("activity");
 
@@ -70,9 +78,11 @@ public class CommentActivity extends AppCompatActivity {
         commentsText = comments.getText().toString();
 
         //Generate a new record
+        feel = mDrawableName.substring(0, 1).toUpperCase() + mDrawableName.substring(1);
         Record record = new Record(feel,resID,commentsText,date);
         MainActivity.recordHistory.add(record);
         saveData("record");
+        Toast.makeText(this, R.string.save_toast, Toast.LENGTH_SHORT).show();
         finish();
     }
 
@@ -85,6 +95,9 @@ public class CommentActivity extends AppCompatActivity {
         Button delete = findViewById(R.id.deleteButton);
         delete.setVisibility(View.INVISIBLE); //To set visible
 
+        //set textview invisible in comment
+        prompt.setVisibility(View.INVISIBLE);
+
         //set the comment edittext
         comments.setText(getIntent().getStringExtra("comment"));
 
@@ -96,9 +109,9 @@ public class CommentActivity extends AppCompatActivity {
         image.setImageDrawable(drawable );
 
         //set the textview
-        feel = mDrawableName.substring(0, 1).toUpperCase() + mDrawableName.substring(1);
-        prompt_text = "It seems like you are feeling \""+feel+"\" today, do you wanna leave some comments?";
+        prompt_text = titles.get(mDrawableName);
         prompt.setText(prompt_text);
+        comments.setHint(prompt_text);
     }
 
     public void initFromHistory(){
@@ -133,7 +146,7 @@ public class CommentActivity extends AppCompatActivity {
         String newComments  = comments.getText().toString();
         record.setComment(newComments);
         saveData("record");
-
+        Toast.makeText(this, R.string.modify_toast, Toast.LENGTH_SHORT).show();
         finish();
     }
 
@@ -152,6 +165,7 @@ public class CommentActivity extends AppCompatActivity {
 
         Object deleteRecord = MainActivity.recordHistory.remove(position);
         saveData("record");
+        Toast.makeText(this, R.string.delete_toast, Toast.LENGTH_SHORT).show();
         finish();
 
     }
