@@ -1,40 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">FeelsBook</string>
+    <string name="app_name">心情的书</string>
 
     <!-- String for MainActivity -->
-    <string name="historyButton">Check History</string>
-    <string name="recordButton">Record Feels</string>
-    <string name="askFeeling">How do you feel today?</string>
+    <string name="historyButton">历史记录</string>
+    <string name="recordButton">记录心情</string>
+    <string name="askFeeling">你今天心情怎么样？</string>
 
     <!-- String for RecordActivity -->
-
-    <string name="Joy">joy</string>
-    <string name="Cool">cool</string>
-    <string name="Love">love</string>
-    <string name="Anger">anger</string>
-    <string name="Fear">fear</string>
-    <string name="Lucky">lucky</string>
-    <string name="Sick">sick</string>
-    <string name="Surprise">surprise</string>
-    <string name="Speechless">speechless</string>
-    <string name="Sadness">sadness</string>
-
+    <string name="joy_now">我感觉很开心</string>
+    <string name="cool_now">我感觉很酷</string>
+    <string name="love_now">我感觉很有爱</string>
+    <string name="anger_now">我感觉很生气</string>
+    <string name="fear_now">我感觉很担心</string>
+    <string name="lucky_now">我感觉很幸运</string>
+    <string name="sick_now">我感觉很不舒服</string>
+    <string name="surprise_now">我感觉很惊讶</string>
+    <string name="speechless_now">我感觉很无语</string>
+    <string name="sadness_now">我感觉很难过</string>
 
     <!-- String for CommentActivity -->
-    <string name="current_feeling">How do you feel now?</string>
-    <string name="joy">Do you want to share your joy?</string>
-    <string name="cool">What made you so cool?</string>
-    <string name="love">Who you fall in love with?</string>
-    <string name="anger">Why are you angry?</string>
-    <string name="fear">What are you worry about?</string>
-    <string name="lucky">Wow, you are lucky!</string>
-    <string name="sick">May you get well soon!</string>
-    <string name="surprise">What happened, dude?</string>
-    <string name="speechless">Who made you speechless?</string>
-    <string name="sadness">What made you so sad?</string>
+    <string-array name="hint_titles">
+        <item>joy</item>
+        <item>cool</item>
+        <item>love</item>
+        <item>anger</item>
+        <item>fear</item>
+        <item>lucky</item>
+        <item>sick</item>
+        <item>surprise</item>
+        <item>speechless</item>
+        <item>sadness</item>
+    </string-array>
 
-    <string name="save">Save</string>
-    <string name="modify">Modify</string>
-    <string name="delete">Delete</string>
+    <string-array name="hint_values">
+        <item>想分享一下你的喜悦嘛？</item>
+        <item>你简直酷爆了！</item>
+        <item>为何如此有爱？</item>
+        <item>怎么这么生气？</item>
+        <item>你在担心什么？</item>
+        <item>嘿，幸运儿！</item>
+        <item>希望你早点好起来！</item>
+        <item>有啥新鲜事儿？</item>
+        <item>谁让你这么无语？</item>
+        <item>怎么这么难过？</item>
+    </string-array>
+
+    <string name="save">保存</string>
+    <string name="modify">修改</string>
+    <string name="delete">删除</string>
+
+    <string name="modify_delete_prompt">你可以随时修改或者删除你的心情记录！</string>
+
+    <!-- String for Record class -->
+    <string name="date">日期: </string>
+    <string name="felt">心情: </string>
+
+    <!-- String for all Toasts -->
+    <string name="save_toast">你的心情记录已经保存！</string>
+    <string name="modify_toast">你的心情记录已经修改！</string>
+    <string name="delete_toast">你的心情记录已经删除！</string>
+
 </resources>

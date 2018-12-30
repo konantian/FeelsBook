@@ -135,7 +135,7 @@ public class CommentActivity extends AppCompatActivity {
         image.setImageDrawable(drawable);
 
         //set the textview
-        prompt_text = "It seems like you are feeling \""+feel+"\" today, do you wanna modify your comments?";
+        prompt_text = getResources().getString(R.string.modify_delete_prompt);
         prompt.setText(prompt_text);
 
     }

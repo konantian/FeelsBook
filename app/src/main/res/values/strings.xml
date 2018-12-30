@@ -18,18 +18,6 @@
     <string name="speechless_now">I\'m feeling "Speechless" now</string>
     <string name="sadness_now">I\'m feeling "Sadness" now</string>
 
-    <string name="Joy">joy</string>
-    <string name="Cool">cool</string>
-    <string name="Love">love</string>
-    <string name="Anger">anger</string>
-    <string name="Fear">fear</string>
-    <string name="Lucky">lucky</string>
-    <string name="Sick">sick</string>
-    <string name="Surprise">surprise</string>
-    <string name="Speechless">speechless</string>
-    <string name="Sadness">sadness</string>
-
-
     <!-- String for CommentActivity -->
     <string-array name="hint_titles">
         <item>joy</item>
@@ -60,6 +48,12 @@
     <string name="save">Save</string>
     <string name="modify">Modify</string>
     <string name="delete">Delete</string>
+
+    <string name="modify_delete_prompt">You can modify or delete your record anytime!</string>
+
+    <!-- String for Record class -->
+    <string name="date">Time: </string>
+    <string name="felt">You felt: </string>
 
     <!-- String for all Toasts -->
     <string name="save_toast">You have saved your new record successfully!</string>

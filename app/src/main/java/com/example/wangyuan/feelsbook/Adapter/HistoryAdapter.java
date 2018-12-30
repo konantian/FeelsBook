@@ -20,6 +20,7 @@ public class HistoryAdapter extends ArrayAdapter<Record> {
 
     private int resourceId;
     private List<Record> records;
+    private Context ctx;
 
     public HistoryAdapter(@NonNull Context context, int resource, List<Record> records) {
         super(context, resource, records);

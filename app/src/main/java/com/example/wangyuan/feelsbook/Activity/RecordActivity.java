@@ -68,16 +68,16 @@ public class RecordActivity extends AppCompatActivity {
     public Hashtable<Integer, String> getTable(){
         Hashtable<Integer, String>  feels = new Hashtable<>();
 
-        feels.put(0,getString(R.string.Joy));
-        feels.put(1,getString(R.string.Anger));
-        feels.put(2,getString(R.string.Cool));
-        feels.put(3,getString(R.string.Fear));
-        feels.put(4,getString(R.string.Love));
-        feels.put(5,getString(R.string.Lucky));
-        feels.put(6,getString(R.string.Sick));
-        feels.put(7,getString(R.string.Speechless));
-        feels.put(8,getString(R.string.Surprise));
-        feels.put(9,getString(R.string.Sadness));
+        feels.put(0,"joy");
+        feels.put(1,"anger");
+        feels.put(2,"cool");
+        feels.put(3,"fear");
+        feels.put(4,"love");
+        feels.put(5,"lucky");
+        feels.put(6,"sick");
+        feels.put(7,"speechless");
+        feels.put(8,"surprise");
+        feels.put(9,"sadness");
 
         return feels;
     }
