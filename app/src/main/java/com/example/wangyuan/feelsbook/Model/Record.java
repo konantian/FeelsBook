@@ -56,6 +56,11 @@ public class Record {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm", Locale.CANADA);
         String current_time = dateFormat.format(this.date);
 
-        return "Time: "+current_time+" "+"You felt: "+feel;}
+        dateFormat = new SimpleDateFormat("EEEE",Locale.CANADA);
+        String dayOfTheWeek = dateFormat.format(this.date);
+
+
+        return "Date: "+current_time+"  |  "+dayOfTheWeek;
+    }
 
 }
