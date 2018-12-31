@@ -49,6 +49,7 @@
     <string name="modify">Modify</string>
     <string name="delete">Delete</string>
 
+    <string name="title_prompt">Please enter the title!</string>
     <string name="modify_delete_prompt">You can modify or delete your record anytime!</string>
 
     <!-- String for Record class -->
@@ -59,6 +60,7 @@
     <string name="save_toast">You have saved your new record successfully!</string>
     <string name="modify_toast">You have modified your record successfully!</string>
     <string name="delete_toast">You have deleted you record successfully!</string>
+    <string name="empty_toast">Your title cannot be empty!</string>
 
 
 </resources>

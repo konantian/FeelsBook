@@ -10,9 +10,11 @@ public class Record {
     public Date date;
     public String feel;
     public int resId;
+    public String title;
 
 
-    public Record(String feel, int resId,String comment,Date date) {
+    public Record(String title,String feel, int resId,String comment,Date date) {
+        this.title = title;
         this.comment = comment;
         this.date = date;
         this.feel = feel;
@@ -51,7 +53,11 @@ public class Record {
         this.date = date;
     }
 
-    public String getTitle(){
+    public String getTitle() { return title; }
+
+    public void setTitle(String title) { this.title = title; }
+
+    public String getRecordTitle(){
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm", Locale.CANADA);
         String current_time = dateFormat.format(this.date);

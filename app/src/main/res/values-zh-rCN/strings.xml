@@ -35,12 +35,12 @@
 
     <string-array name="hint_values">
         <item>想分享一下你的喜悦嘛？</item>
-        <item>你简直酷爆了！</item>
+        <item>你怎么这么酷？</item>
         <item>为何如此有爱？</item>
         <item>怎么这么生气？</item>
         <item>你在担心什么？</item>
-        <item>嘿，幸运儿！</item>
-        <item>希望你早点好起来！</item>
+        <item>嘿，幸运儿！有什么幸运事儿？</item>
+        <item>哪里不舒服？</item>
         <item>有啥新鲜事儿？</item>
         <item>谁让你这么无语？</item>
         <item>怎么这么难过？</item>
@@ -50,6 +50,7 @@
     <string name="modify">修改</string>
     <string name="delete">删除</string>
 
+    <string name="title_prompt">请输入标题！</string>
     <string name="modify_delete_prompt">你可以随时修改或者删除你的心情记录！</string>
 
     <!-- String for Record class -->
@@ -60,5 +61,6 @@
     <string name="save_toast">你的心情记录已经保存！</string>
     <string name="modify_toast">你的心情记录已经修改！</string>
     <string name="delete_toast">你的心情记录已经删除！</string>
+    <string name="empty_toast">你的标题不能为空!</string>
 
 </resources>

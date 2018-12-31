@@ -36,6 +36,7 @@ public class CommentActivity extends AppCompatActivity {
     Record record;
     Date date;
     HashMap<String, String> titles;
+    String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,7 @@ public class CommentActivity extends AppCompatActivity {
         //initialize activity elements
         image = findViewById(R.id.displayEmoji);
         comments = findViewById(R.id.optionalComment);
-        prompt = findViewById(R.id.feelPrompt);
+        prompt = findViewById(R.id.feelTitle);
 
         String[] titleKeys = getResources().getStringArray(R.array.hint_titles);
         String[] titleValues = getResources().getStringArray(R.array.hint_values);
@@ -79,9 +80,16 @@ public class CommentActivity extends AppCompatActivity {
         //set the comments
         commentsText = comments.getText().toString();
 
+        //set the title
+        title = prompt.getText().toString();
+        if(title.equals("")){
+            Toast.makeText(CommentActivity.this,R.string.empty_toast,Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         //Generate a new record
         feel = mDrawableName.substring(0, 1).toUpperCase() + mDrawableName.substring(1);
-        Record record = new Record(feel,resID,commentsText,date);
+        Record record = new Record(title,feel,resID,commentsText,date);
         MainActivity.recordHistory.add(record);
         saveData("record");
         Toast.makeText(this, R.string.save_toast, Toast.LENGTH_SHORT).show();
@@ -97,9 +105,6 @@ public class CommentActivity extends AppCompatActivity {
         Button delete = findViewById(R.id.deleteButton);
         delete.setVisibility(View.INVISIBLE); //To set visible
 
-        //set textview invisible in comment
-        prompt.setVisibility(View.INVISIBLE);
-
         //set the comment edittext
         comments.setText(getIntent().getStringExtra("comment"));
 
@@ -110,9 +115,11 @@ public class CommentActivity extends AppCompatActivity {
         drawable = res.getDrawable(resID);
         image.setImageDrawable(drawable );
 
-        //set the textview
+        //set the title
+        prompt.setHint(R.string.title_prompt);
+
+        //set the comment
         prompt_text = titles.get(mDrawableName);
-        prompt.setText(prompt_text);
         comments.setHint(prompt_text);
     }
 
@@ -128,6 +135,9 @@ public class CommentActivity extends AppCompatActivity {
         //set comments
         comments.setText(record.getComment());
 
+        //set the title
+        prompt.setText(record.getTitle());
+
         //set imageview
         res = getResources();
         String feel = record.getFeel();
@@ -136,10 +146,6 @@ public class CommentActivity extends AppCompatActivity {
         drawable = res.getDrawable(resID);
         image.setImageDrawable(drawable);
 
-        //set the textview
-        prompt_text = getResources().getString(R.string.modify_delete_prompt);
-        prompt.setText(prompt_text);
-
     }
 
     //save modified record to local file
@@ -147,6 +153,10 @@ public class CommentActivity extends AppCompatActivity {
 
         String newComments  = comments.getText().toString();
         record.setComment(newComments);
+
+        String newTitle = prompt.getText().toString();
+        record.setTitle(newTitle);
+
         saveData("record");
         Toast.makeText(this, R.string.modify_toast, Toast.LENGTH_SHORT).show();
         finish();
