@@ -31,14 +31,14 @@ public class HistoryAdapter extends ArrayAdapter<Record> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = LayoutInflater.from(getContext()).inflate(resourceId, null);
-        TextView contentTitle = view.findViewById(R.id.contentTitle);
-        TextView contentHistory = view.findViewById(R.id.contentHistory);
+        TextView contentTitle = view.findViewById(R.id.recordDate);
+        TextView contentHistory = view.findViewById(R.id.recordTitle);
         ImageView emojiPic = view.findViewById(R.id.emojiHistory);
 
         Record record  = records.get(position);
 
         String title = record.getRecordTitle();
-        String content = record.getComment();
+        String content = record.getTitle();
 
         contentHistory.setText(content);
         contentTitle.setText(title);
