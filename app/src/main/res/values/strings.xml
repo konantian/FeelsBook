@@ -57,9 +57,9 @@
     <string name="felt">You felt: </string>
 
     <!-- String for all Toasts -->
-    <string name="save_toast">You have saved your new record successfully!</string>
-    <string name="modify_toast">You have modified your record successfully!</string>
-    <string name="delete_toast">You have deleted you record successfully!</string>
+    <string name="save_toast">Your new record saved successfully!</string>
+    <string name="modify_toast">Your modifies to your record has been saved successfully!</string>
+    <string name="delete_toast">Your record has been deleted successfully!</string>
     <string name="empty_toast">Your title cannot be empty!</string>
 
 

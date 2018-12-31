@@ -132,9 +132,6 @@ public class CommentActivity extends AppCompatActivity {
 
         record  = MainActivity.recordHistory.get(position);
 
-        //set comments
-        comments.setText(record.getComment());
-
         //set the title
         prompt.setText(record.getTitle());
 
@@ -145,6 +142,16 @@ public class CommentActivity extends AppCompatActivity {
         resID = res.getIdentifier(mDrawableName , "drawable", getPackageName());
         drawable = res.getDrawable(resID);
         image.setImageDrawable(drawable);
+
+        //set comments
+        String oldComment = record.getComment();
+        if(oldComment.equals("")){
+            comments.setHint(titles.get(mDrawableName));
+        }
+        else{
+            comments.setText(oldComment);
+        }
+
 
     }
 
