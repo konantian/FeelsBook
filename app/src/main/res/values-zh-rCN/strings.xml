@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">心情的书</string>
+    <string name="app_name">心路历程</string>
 
     <!-- String for MainActivity -->
     <string name="historyButton">历史记录</string>
