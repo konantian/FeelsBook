@@ -59,14 +59,10 @@ public class Record {
 
     public String getRecordTitle(){
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm", Locale.CANADA);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'-'HH:mm-EEEE", Locale.getDefault());
         String current_time = dateFormat.format(this.date);
 
-        dateFormat = new SimpleDateFormat("EEEE",Locale.CANADA);
-        String dayOfTheWeek = dateFormat.format(this.date);
-
-
-        return "Date: "+current_time+"  |  "+dayOfTheWeek;
+        return "Date: "+current_time;
     }
 
 }
