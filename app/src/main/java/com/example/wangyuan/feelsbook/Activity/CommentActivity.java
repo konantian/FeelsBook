@@ -18,8 +18,6 @@ import com.google.gson.Gson;
 import java.util.Date;
 import java.util.HashMap;
 
-import tyrantgit.explosionfield.ExplosionField;
-
 public class CommentActivity extends AppCompatActivity {
 
     Drawable drawable;
